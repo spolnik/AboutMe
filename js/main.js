@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
     /* Scroll hire me button to contact page */
-    $('.hire-me').click(function() {
+    $('.contact-me').click(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 500);
