@@ -97,7 +97,7 @@ $(document).ready(function() {
             { src: 'img/slider/54.jpg' },
             { src: 'img/slider/53.jpg' },
             { src: 'img/slider/56.jpg' },
-            { src: 'img/slider/65.jpg' }
+            { src: 'img/slider/48.jpg' }
         ],
     overlay: true
 });
