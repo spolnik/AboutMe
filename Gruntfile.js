@@ -2,6 +2,17 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        recess: {
+            dist: {
+                options: {
+                    compile: false,
+                    noIDs: true
+                },
+                files: {
+                    'src': 'css/main.css'
+                }
+            }
+        },
         concat: {
             options: {
                 separator: ';'
@@ -18,27 +29,45 @@ module.exports = function(grunt) {
                     './bower_components/waypoints/waypoints.js',
                     './js/main.js'
                 ],
-                dest: './dist/js/bundle.js'
+                dest: './js/bundle.js'
+            }
+        },
+        concat_css: {
+            all: {
+                src: [
+                    './bower_components/bootstrap/dist/css/bootstrap.min.css',
+                    './bower_components/font-awesome/css/font-awesome.min.css',
+                    './bower_components/vegas/dist/vegas.min.css',
+                    './css/main.css'
+                ],
+                dest: './css/bundle.css'
             }
         },
         uglify: {
-            options: {
-                mangle: false  // Use if you want the names of your functions and variables unchanged
-            },
             dist: {
                 files: {
-                    './dist/js/bundle.min.js': './dist/js/bundle.js'
+                    './js/bundle.min.js': './js/bundle.js'
+                }
+            }
+        },
+        cssmin: {
+            target: {
+                files: {
+                    './css/bundle.min.css': './css/bundle.css'
                 }
             }
         }
     });
 
     // Plugin loading
+    grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-concat-css');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
     // Task definition
-    grunt.registerTask('default', ['concat', 'uglify']);
+    grunt.registerTask('default', ['recess', 'concat', 'concat_css', 'uglify', 'cssmin']);
 
 };
