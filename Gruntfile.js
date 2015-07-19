@@ -32,17 +32,6 @@ module.exports = function(grunt) {
                 dest: './js/bundle.js'
             }
         },
-        concat_css: {
-            all: {
-                src: [
-                    './bower_components/bootstrap/dist/css/bootstrap.min.css',
-                    './bower_components/font-awesome/css/font-awesome.min.css',
-                    './bower_components/vegas/dist/vegas.min.css',
-                    './css/main.css'
-                ],
-                dest: './css/bundle.css'
-            }
-        },
         uglify: {
             dist: {
                 files: {
@@ -53,7 +42,12 @@ module.exports = function(grunt) {
         cssmin: {
             target: {
                 files: {
-                    './css/bundle.min.css': './css/bundle.css'
+                    './css/bundle.min.css': [
+                        './bower_components/bootstrap/dist/css/bootstrap.min.css',
+                        './bower_components/font-awesome/css/font-awesome.min.css',
+                        './bower_components/vegas/dist/vegas.min.css',
+                        './css/main.css'
+                    ]
                 }
             }
         }
@@ -62,12 +56,11 @@ module.exports = function(grunt) {
     // Plugin loading
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-concat-css');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
     // Task definition
-    grunt.registerTask('default', ['recess', 'concat', 'concat_css', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['concat', 'uglify', 'recess', 'cssmin']);
 
 };
