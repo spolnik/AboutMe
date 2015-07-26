@@ -1,0 +1,33 @@
+@import "colors";
+
+.navbar {
+  width: 100%;
+}
+
+.navbar-default {
+  position: fixed;
+  display: inline-block;
+  color: $navbar_text_color;
+  text-align: center;
+  text-transform: uppercase;
+  background: $navbar_background_color;
+  border: none;
+}
+
+.navbar-nav {
+  display: inline-block;
+  float: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1em;
+  font-weight: bold;
+  list-style: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background: none;
+}

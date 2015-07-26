@@ -1,0 +1,30 @@
+@import "colors";
+
+.section-header {
+  text-align: center;
+}
+
+.section-header p {
+  font-size: 1.5em;
+}
+
+.section-title {
+  padding: 20px 0;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: $title_text_color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.spacer {
+  width: 100px;
+  height: 2px;
+  margin: auto;
+}
+
+.section-subtitle {
+  padding: 30px 0;
+  text-align: center;
+}

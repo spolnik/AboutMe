@@ -2,6 +2,20 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        clean: {
+            build: ["build"],
+            release: ["dist"]
+        },
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'build/main.css': 'css/main.scss'
+                }
+            }
+        },
         recess: {
             dist: {
                 options: {
@@ -9,7 +23,7 @@ module.exports = function(grunt) {
                     noIDs: true
                 },
                 files: {
-                    'src': 'css/main.css'
+                    'src': 'build/main.css'
                 }
             }
         },
@@ -29,31 +43,32 @@ module.exports = function(grunt) {
                     './bower_components/waypoints/waypoints.js',
                     './js/main.js'
                 ],
-                dest: './js/bundle.js'
+                dest: './build/bundle.js'
             }
         },
         uglify: {
             dist: {
                 files: {
-                    './js/bundle.min.js': './js/bundle.js'
+                    './dist/bundle.min.js': './build/bundle.js'
                 }
             }
         },
         cssmin: {
             target: {
                 files: {
-                    './css/bundle.min.css': [
+                    './dist/bundle.min.css': [
                         './bower_components/bootstrap/dist/css/bootstrap.min.css',
                         './bower_components/font-awesome/css/font-awesome.min.css',
                         './bower_components/vegas/dist/vegas.min.css',
-                        './css/main.css'
+                        './build/main.css'
                     ]
                 }
             }
         }
     });
 
-    // Plugin loading
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -61,6 +76,6 @@ module.exports = function(grunt) {
 
 
     // Task definition
-    grunt.registerTask('default', ['concat', 'uglify', 'recess', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'sass', 'recess', 'cssmin']);
 
 };

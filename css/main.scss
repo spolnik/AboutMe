@@ -1,0 +1,88 @@
+@import "colors";
+@import "fonts";
+
+@import "base";
+@import "nav";
+@import "layout";
+@import "slider";
+@import "dividers";
+@import "fonts";
+@import "chart";
+@import "forms";
+@import "social";
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ==========================================================================
+   Responsive Settings
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .page-profile .profile {
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 479px) {
+    .page-welcome header h1 {
+        font-size: 2em;
+    }
+
+    .page-welcome header p {
+        font-size: 1em;
+        line-height: 3em;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .section-header p {
+        font-size: 1.2em;
+    }
+
+    .page-skills-development {
+        text-align: center;
+    }
+
+    .page-skills-management {
+        text-align: center;
+    }
+
+    .page-profile .profile {
+        margin: 0 auto 20px auto;
+    }
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus, a:hover, a:active, .navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $secondary_color;
+}
+
+.spacer, .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+
+    background: $secondary_color;
+}
+
+.page-contact {
+    color: $main_color;
+    background: $secondary_color;
+}
+
+.page-contact .spacer {
+    background: $main_color;
+}
+
+.page-contact .section-title {
+    color: $main_color;
+}
