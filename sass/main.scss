@@ -12,12 +12,15 @@
 @import "social";
 
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus, a:hover, a:active, .navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > li > a:focus,
+a:hover,
+a:active,
+.navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: $secondary_color;
 }
 
-.spacer, .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+.spacer {
     background: $secondary_color;
 }

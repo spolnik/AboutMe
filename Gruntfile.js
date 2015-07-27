@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'build/main.css': 'css/main.scss'
+                    'build/main.css': 'sass/main.scss'
                 }
             }
         },
