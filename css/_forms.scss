@@ -3,7 +3,7 @@
 .btn-default {
   position: relative;
   padding: 12px 26px 12px;
-  margin: 40px auto 0;
+  margin: 30px auto 0;
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 2px;
@@ -19,6 +19,14 @@
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+
+  @media (max-height: 450px) {
+    margin: 10px auto 0;
+  }
+
+  @media (max-width: 768px) {
+    margin: 10px auto 0;
+  }
 }
 
 .btn-default:hover, .btn-default:active {

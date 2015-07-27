@@ -27,6 +27,9 @@ module.exports = function(grunt) {
                 }
             }
         },
+        jshint: {
+            all: ['Gruntfile.js', 'js/**/*.js']
+        },
         concat: {
             options: {
                 separator: ';'
@@ -68,14 +71,14 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-
-    // Task definition
-    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'sass', 'recess', 'cssmin']);
-
+    grunt.registerTask('default',
+        ['clean', 'jshint', 'concat', 'uglify', 'sass', 'recess', 'cssmin']
+    );
 };

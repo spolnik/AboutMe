@@ -6,6 +6,10 @@
 
 .section-header p {
   font-size: 1.5em;
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+  }
 }
 
 .section-title {
@@ -16,6 +20,10 @@
   color: $title_text_color;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+  }
 }
 
 .spacer {

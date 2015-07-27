@@ -1,39 +1,10 @@
 @import "colors";
+@import "welcome";
 
-.page-welcome {
-  position: relative;
-  width: 100%;
-  height: 100% !important;
-  overflow: hidden;
-  text-align: center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.page-welcome header {
-  padding-top: 20%;
-  color: $main_color;
-}
-
-.page-welcome header h1 {
-  padding: 0;
-  margin: 0;
-  font-size: 4.5em;
-  font-weight: 700;
-  line-height: 1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.page-welcome header p {
-  display: inline-block;
-  padding: 0 8px;
-  margin-bottom: 5px;
-  font-size: 2em;
-  line-height: 3em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .page-profile {
@@ -46,18 +17,34 @@
   height: 225px;
   margin: 0 20px 20px 0;
   border: 5px solid #333;
+
+  @media (max-height: 450px) {
+    margin: 0 auto 20px auto;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto 20px auto;
+  }
 }
 
 .page-skills-development {
   padding: 75px 0;
   text-align: center;
   background: $page_background_color_secondary;
+
+  @media (max-width: 479px) {
+    text-align: center;
+  }
 }
 
 .page-skills-management {
   padding: 75px 0;
   text-align: center;
   background: $page_background_color;
+
+  @media (max-width: 479px) {
+    text-align: center;
+  }
 }
 
 .page-education {
@@ -72,6 +59,8 @@
 
 .page-contact {
   padding: 75px 0;
+  color: $main_color;
+  background: $secondary_color;
 }
 
 .page-contact .contact-info p {
@@ -79,5 +68,13 @@
 }
 
 .page-contact .contact-info p a {
+  color: $main_color;
+}
+
+.page-contact .spacer {
+  background: $main_color;
+}
+
+.page-contact .section-title {
   color: $main_color;
 }
