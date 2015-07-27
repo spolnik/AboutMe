@@ -1,0 +1,40 @@
+@import "colors";
+
+.btn-default {
+  position: relative;
+  padding: 12px 26px 12px;
+  margin: 30px auto 0;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: $main_color;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: auto;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid $main_color;
+  border-radius: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+
+  @media (max-height: 450px) {
+    margin: 10px auto 0;
+  }
+
+  @media (max-width: 768px) {
+    margin: 10px auto 0;
+  }
+}
+
+.btn-default:hover, .btn-default:active {
+  color: $secondary_color;
+  background: $main_color;
+  border-color: $main_color;
+}
+
+input, .input-lg, button {
+  border-radius: 0;
+}

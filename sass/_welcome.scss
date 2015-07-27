@@ -1,0 +1,45 @@
+@import "colors";
+
+.page-welcome {
+  width: 100%;
+  height: 100% !important;
+  overflow: hidden;
+  text-align: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page-welcome header {
+  padding-top: 20%;
+  color: $main_color;
+}
+
+.page-welcome header h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) and (min-height: 640px) {
+    font-size: 4.5em;
+  }
+}
+
+.page-welcome header p {
+  display: inline-block;
+  padding: 0 8px;
+  margin-bottom: 5px;
+  font-size: 1em;
+  line-height: 3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) and (min-height: 640px) {
+    font-size: 2em;
+    line-height: 3em;
+  }
+}

@@ -1,0 +1,26 @@
+@import "colors";
+@import "fonts";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: $source_sans_pro;
+  color: $text_color;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:link, a:visited {
+  outline: 0;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $oxygen;
+  font-weight: 700;
+}

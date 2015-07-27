@@ -1,0 +1,66 @@
+@import "colors";
+
+.social-icons .btn {
+  margin-right: 15px;
+}
+
+.social-icons {
+  padding-top: 10px;
+  margin-bottom: 35px;
+}
+
+.social-icons .btn-clear {
+  border: 1px solid $main_color;
+}
+
+.btn-round {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn-round i {
+  position: relative;
+  top: 15px;
+  font-size: 20px;
+}
+
+.btn-clear {
+  font-weight: bold;
+  color: $main_color;
+  background: none;
+  border: 1px solid $main_color;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
+
+.btn-clear:hover, .selected {
+  background: $main_color;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+.btn-twitter:hover {
+  color: $twitter_color;
+}
+
+.btn-linkedin:hover {
+  color: $linkedin_color;
+}
+
+.btn-github:hover {
+  color: $github_color;
+}
+
+.btn-wordpress:hover {
+  color: $wordpress_color;
+}

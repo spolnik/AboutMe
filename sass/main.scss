@@ -1,0 +1,26 @@
+@import "colors";
+@import "fonts";
+
+@import "base";
+@import "nav";
+@import "layout";
+@import "slider";
+@import "dividers";
+@import "fonts";
+@import "chart";
+@import "forms";
+@import "social";
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+a:hover,
+a:active,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $secondary_color;
+}
+
+.spacer {
+    background: $secondary_color;
+}
