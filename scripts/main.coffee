@@ -35,10 +35,10 @@ $('.chart').waypoint (->
 # Vegas Home Slider
 $('#page-welcome').vegas
   slides: [
-    {src: 'img/slider/54.jpg'}
-    {src: 'img/slider/53.jpg'}
-    {src: 'img/slider/56.jpg'}
-    {src: 'img/slider/48.jpg'}
+    {src: 'dist/img/3.jpg'}
+    {src: 'dist/img/2.jpg'}
+    {src: 'dist/img/4.jpg'}
+    {src: 'dist/img/1.jpg'}
   ]
   overlay: true
 
