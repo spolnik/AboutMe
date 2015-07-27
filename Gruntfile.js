@@ -86,6 +86,20 @@ module.exports = function(grunt) {
                     'build/main.js': 'scripts/main.coffee'
                 }
             }
+        },
+        imagemin: {
+            static: {
+                options: {
+                    optimizationLevel: 4
+                },
+                files: {
+                    'dist/img/profile.jpg': 'img/profile.JPG',
+                    'dist/img/1.jpg': 'img/slider/48.jpg',
+                    'dist/img/2.jpg': 'img/slider/53.jpg',
+                    'dist/img/3.jpg': 'img/slider/54.jpg',
+                    'dist/img/4.jpg': 'img/slider/56.jpg'
+                }
+            }
         }
     });
 
@@ -98,8 +112,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.registerTask('default',
-        ['clean', 'coffee', 'jshint', 'concat', 'uglify', 'sass', 'recess', 'uncss', 'cssmin']
+        ['clean', 'imagemin', 'coffee', 'jshint', 'concat', 'uglify', 'sass', 'recess', 'uncss', 'cssmin']
     );
 };
