@@ -28,7 +28,7 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            all: ['Gruntfile.js', 'js/**/*.js']
+            all: ['Gruntfile.js', 'build/main.js']
         },
         concat: {
             options: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                     './bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js',
                     './bower_components/vegas/dist/vegas.js',
                     './bower_components/waypoints/waypoints.js',
-                    './js/main.js'
+                    './build/main.js'
                 ],
                 dest: './build/bundle.js'
             }
@@ -67,6 +67,13 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+        },
+        coffee: {
+            compile: {
+                files: {
+                    'build/main.js': 'scripts/main.coffee'
+                }
+            }
         }
     });
 
@@ -77,8 +84,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
 
     grunt.registerTask('default',
-        ['clean', 'jshint', 'concat', 'uglify', 'sass', 'recess', 'cssmin']
+        ['clean', 'coffee', 'jshint', 'concat', 'uglify', 'sass', 'recess', 'cssmin']
     );
 };
