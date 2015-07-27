@@ -56,11 +56,23 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uncss: {
+            dist: {
+                options: {
+                     'stylesheets': [
+                         './bower_components/bootstrap/dist/css/bootstrap.min.css'
+                     ]
+                },
+                files: {
+                    'build/bootstrap.tidy.css': 'index.html'
+                }
+            }
+        },
         cssmin: {
             target: {
                 files: {
                     './dist/bundle.min.css': [
-                        './bower_components/bootstrap/dist/css/bootstrap.min.css',
+                        './build/bootstrap.tidy.css',
                         './bower_components/font-awesome/css/font-awesome.min.css',
                         './bower_components/vegas/dist/vegas.min.css',
                         './build/main.css'
@@ -85,8 +97,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-uncss');
 
     grunt.registerTask('default',
-        ['clean', 'coffee', 'jshint', 'concat', 'uglify', 'sass', 'recess', 'cssmin']
+        ['clean', 'coffee', 'jshint', 'concat', 'uglify', 'sass', 'recess', 'uncss', 'cssmin']
     );
 };
