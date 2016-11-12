@@ -81,7 +81,7 @@ module.exports = function(grunt) {
                     optimizationLevel: 4
                 },
                 files: {
-                    'dist/img/profile.jpg': 'img/profile.JPG',
+                    'dist/img/profile.jpg': 'img/profile.jpg',
                     'dist/img/1.jpg': 'img/slider/48.jpg',
                     'dist/img/2.jpg': 'img/slider/53.jpg',
                     'dist/img/3.jpg': 'img/slider/54.jpg',
