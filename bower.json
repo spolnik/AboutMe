@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://github.com/spolnik/AboutMe",
   "authors": [
-    "Jacek Spolnik <jacek.spolnik@gmail.com>"
+    "Jacek Spolnik"
   ],
   "description": "About Me page",
   "main": "index.html",
