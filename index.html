@@ -335,10 +335,6 @@
                     <h2>Let&rsquo;s build serious engineering with startup speed.</h2>
                 </div>
                 <div class="contact-links">
-                    <button class="contact-link email-reveal" type="button" data-email-trigger>
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">Reveal address</span>
-                    </button>
                     <a class="contact-link" href="https://www.linkedin.com/in/spolnik/" target="_blank" rel="noopener">
                         <span class="contact-label">LinkedIn</span>
                         <span class="contact-value">linkedin.com/in/spolnik</span>
@@ -351,32 +347,5 @@
             </div>
         </section>
     </main>
-
-    <script>
-        (() => {
-            const email = String.fromCharCode(106, 97, 99, 101, 107, 46, 115, 112, 111, 108, 110, 105, 107, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109);
-            const triggers = document.querySelectorAll("[data-email-trigger]");
-
-            const revealEmail = () => {
-                triggers.forEach((trigger) => {
-                    trigger.innerHTML = `<span class="contact-label">Email</span><span class="contact-value">${email}</span>`;
-                    trigger.dataset.revealed = "true";
-                    trigger.classList.add("is-revealed");
-                    trigger.setAttribute("aria-label", `Email ${email}`);
-                });
-            };
-
-            triggers.forEach((trigger) => {
-                trigger.addEventListener("click", () => {
-                    if (trigger.dataset.revealed === "true") {
-                        window.location.href = `mailto:${email}`;
-                        return;
-                    }
-
-                    revealEmail();
-                });
-            });
-        })();
-    </script>
 </body>
 </html>
