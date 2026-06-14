@@ -555,14 +555,6 @@ li + li {
     overflow-wrap: anywhere;
 }
 
-.email-reveal:not(.is-revealed) .contact-value {
-    color: var(--off-white);
-}
-
-.email-reveal.is-revealed .contact-value {
-    color: var(--yellow-200);
-}
-
 @media (max-width: 980px) {
     .hero__inner,
     .section__inner--split,
